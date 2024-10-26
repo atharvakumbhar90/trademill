@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Mill - Premium Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background: #ecf0f1;
+            --text: #2c3e50;
+            --gradient: linear-gradient(135deg, #2c3e50, #3498db);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: var(--gradient);
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan-name {
+            font-size: 1.5em;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 1rem 0;
+        }
+
+        .plan-duration {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 1rem;
+            right: -2rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .plan-card {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Premium Trading Plans</h1>
+        <p>Choose the perfect plan for your trading journey</p>
+        <p style="color: #fff; margin-top: 1rem; font-size: 1.1em; background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 50px; display: inline-block;">
+            Try any plan free for 7 days! No credit card required
+        </p>
+    </div>
+
+    <div class="pricing-container">
+        <div class="plan-card">
+            <h2 class="plan-name">Monthly Plan</h2>
+            <div class="plan-price">₹15,000</div>
+            <div class="plan-duration">Billed Monthly</div>
+            <div class="trial-tag">7 Days Free Trial</div>
+            <ul class="features-list">
+                <li>Daily Trading Signals</li>
+                <li>Real-time Market Updates</li>
+                <li>Basic Technical Analysis</li>
+                <li>Community Access</li>
+                <li>Email Support</li>
+            </ul>
+            <a href="payment.html" class="button">Start Free Trial</a>
+        </div>
+
+        <div class="plan-card">
+            <div class="popular-badge">POPULAR</div>
+            <h2 class="plan-name">Quarterly Plan</h2>
+            <div class="plan-price">₹40,000</div>
+            <div class="plan-duration">Billed Quarterly</div>
+            <div class="trial-tag">7 Days Free Trial</div>
+            <ul class="features-list">
+                <li>Everything in Monthly Plan</li>
+                <li>Premium Trading Signals</li>
+                <li>Advanced Technical Analysis</li>
+                <li>Priority Support</li>
+                <li>Weekly Market Outlook</li>
+            </ul>
+            <a href="payment.html" class="button">Start Free Trial</a>
+        </div>
+
+        <div class="plan-card">
+            <h2 class="plan-name">Yearly Plan</h2>
+            <div class="plan-price">₹1,20,000</div>
+            <div class="plan-duration">Billed Annually</div>
+            <div class="trial-tag">7 Days Free Trial</div>
+            <ul class="features-list">
+                <li>Everything in Quarterly Plan</li>
+                <li>1-on-1 Monthly Consultation</li>
+                <li>Portfolio Review</li>
+                <li>Custom Trading Strategies</li>
+                <li>24/7 VIP Support</li>
+            </ul>
+            <a href="payment.html" class="button">Start Free Trial</a>
+        </div>
+
+        <div class="plan-card">
+            <h2 class="plan-name">Lifetime Access</h2>
+            <div class="plan-price">₹2,50,000</div>
+            <div class="plan-duration">One-time Payment</div>
+            <div class="trial-tag">7 Days Free Trial</div>
+            <ul class="features-list">
+                <li>Everything in Yearly Plan</li>
+                <li>Lifetime Updates</li>
+                <li>Exclusive Mastermind Group</li>
+                <li>Quarterly Strategy Sessions</li>
+                <li>Direct Phone Support</li>
+            </ul>
+            <a href="payment.html" class="button">Start Free Trial</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Trade Mill. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9em;">
+            Start your 7-day free trial today. Cancel anytime during the trial period.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Mill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background: #ecf0f1;
+            --text: #2c3e50;
+            --gradient: linear-gradient(135deg, #2c3e50, #3498db);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: var(--gradient);
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(52, 152, 219, 0.2) 0%, rgba(44, 62, 80, 0.2) 100%);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+
+        .header:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            color: white;
+            margin: 0;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 0.5s forwards;
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            margin-top: 1rem;
+            animation: slideUp 0.5s 0.2s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(44, 62, 80, 0.1));
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .section:hover {
+            transform: perspective(1000px) rotateX(5deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .section:hover::before {
+            transform: translateX(0);
+        }
+
+        .section p {
+            margin: 1rem 0;
+            color: var(--text);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%) rotate(45deg);
+            transition: transform 0.5s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover::before {
+            transform: translateX(100%) rotate(45deg);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-size: 1.8em;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .section:hover h2::after {
+            width: 100%;
+        }
+
+        .disclaimer {
+            grid-column: 1 / -1;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 2px solid #eee;
+            margin-top: 2rem;
+            padding-top: 1rem;
+        }
+
+        .footer {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Trade Mill</h1>
+        <p>Your gateway to expert market analysis and insider insights</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>About Us</h2>
+            <p>Welcome to Trade Mill. Join our community to get access to exclusive stock recommendations and market insights. Our members enjoy curated updates and strategic viewpoints, helping you navigate the financial landscape with confidence.</p>
+        </div>
+
+        <div class="section">
+            <h2>Join Our Communities</h2>
+            <p>Be part of our growing community of investors and traders.</p>
+            <p><a href="https://t.me/+atMpi3c46kZhYjk9" class="button">Join Free Community</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Social Media</h2>
+            <p>Follow us on social media for daily updates and market insights.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/shri_investment/" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Premium Membership</h2>
+            <p>Gain exclusive access to our premium content and insights. Click below to join our premium membership program.</p>
+            <p><a href="plans.html" class="button">View Plans</a></p>
+        </div>
+        <div class="section">
+            <h2>Recent Announcements</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, neque omnis. Totam possimus culpa harum asperiores velit officia debitis atque.</p>
+            <p></p>
+        </div>
+
+        <div class="section disclaimer">
+            <h2>Terms and Conditions</h2>
+            <p>Trade mill is not registered with SEBI (Securities and Exchange Board of India) and does not provide SEBI-regulated financial services. All information shared is for educational purposes only. We are not responsible for financial losses resulting from decisions based on our recommendations. Please consult a SEBI-registered advisor before making investment decisions.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Trade mill. All rights reserved.</p>
+    </div>
+</body>
+</html>
