@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Previous head content remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Mill</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Previous styles remain the same */
+        /* Adding new styles for minimized disclaimer */
+        .mini-disclaimer {
+            grid-column: 1 / -1;
+            font-size: 0.6em;
+            color: #999;
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            opacity: 0.7;
+            line-height: 1.2;
+        }
+
+        .mini-disclaimer h2 {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 0.2rem;
+        }
+
+        .mini-disclaimer p {
+            margin: 0;
+        }
+
+        /* All previous styles remain unchanged */
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -217,15 +242,6 @@
             width: 100%;
         }
 
-        .disclaimer {
-            grid-column: 1 / -1;
-            font-size: 0.9em;
-            color: #666;
-            border-top: 2px solid #eee;
-            margin-top: 2rem;
-            padding-top: 1rem;
-        }
-
         .footer {
             background: var(--gradient);
             color: white;
@@ -252,6 +268,9 @@
             .section {
                 padding: 1.5rem;
             }
+            .mini-disclaimer {
+                font-size: 0.5em;
+            }
         }
     </style>
 </head>
@@ -262,9 +281,12 @@
     </div>
 
     <div class="container">
+        <!-- Recent Announcements at top -->
         <div class="section">
-            <h2>About Us</h2>
-            <p>Welcome To Trade Mill. Join our community to get access to exclusive stock recommendations and market insights. Our members enjoy curated updates and strategic viewpoints, helping you navigate the financial landscape with confidence.</p>
+            <h2>Recent Announcements</h2>
+            <p> NIFTY MIDCAP INDEX 56100.. IS FINISHED..⁉️
+                CAUTION ADVICE TO RETAILERS..🚫</p>
+            <p></p>
         </div>
 
         <div class="section">
@@ -286,15 +308,14 @@
             <p>Gain exclusive access to our premium content and insights. Click below to join our premium membership program.</p>
             <p><a href="plans.html" class="button">View Plans</a></p>
         </div>
+
         <div class="section">
-            <h2>Recent Announcements</h2>
-            <p> NIFTY MIDCAP INDEX 56100.. IS FINISHED..⁉️
-                CAUTION ADVICE TO RETAILERS..🚫</p>
-            <p></p>
+            <h2>About Us</h2>
+            <p>Welcome To Trade Mill. Join our community to get access to exclusive stock recommendations and market insights. Our members enjoy curated updates and strategic viewpoints, helping you navigate the financial landscape with confidence.</p>
         </div>
 
-        <div class="section disclaimer">
-            <h2>Terms and Conditions</h2>
+        <!-- Minimized Terms and Conditions -->
+        <div class="mini-disclaimer">
             <p>Trade mill is not registered with SEBI (Securities and Exchange Board of India) and does not provide SEBI-regulated financial services. All information shared is for educational purposes only. We are not responsible for financial losses resulting from decisions based on our recommendations. Please consult a SEBI-registered advisor before making investment decisions.</p>
         </div>
     </div>
