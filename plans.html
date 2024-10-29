@@ -82,6 +82,12 @@
             margin: 1rem 0;
         }
 
+        .original-price {
+            text-decoration: line-through; /* Adds strikethrough */
+            color: #666; /* Optional: make it a lighter color */
+            font-size: 0.9em; /* Optional: adjust font size */
+        }
+
         .plan-duration {
             color: #666;
             font-size: 0.9em;
@@ -159,17 +165,16 @@
     <div class="header">
         <h1>Premium Trading Plans</h1>
         <p>Choose the perfect plan for your trading journey</p>
-        <p style="color: #fff; margin-top: 1rem; font-size: 1.1em; background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 50px; display: inline-block;">
-            Try any plan free for 7 days! No credit card required
-        </p>
     </div>
 
     <div class="pricing-container">
         <div class="plan-card">
             <h2 class="plan-name">Monthly Plan</h2>
-            <div class="plan-price">₹15,000</div>
+            <div class="plan-price">
+                <span class="original-price">₹15,000</span> 
+                ₹9,999
+            </div>
             <div class="plan-duration">Billed Monthly</div>
-            <div class="trial-tag">7 Days Free Trial</div>
             <ul class="features-list">
                 <li>Daily Trading Signals</li>
                 <li>Real-time Market Updates</li>
@@ -177,15 +182,17 @@
                 <li>Community Access</li>
                 <li>Email Support</li>
             </ul>
-            <a href="payment.html" class="button">Start Free Trial</a>
+            <a href="payment.html" class="button">Start Now</a>
         </div>
-
+    
         <div class="plan-card">
             <div class="popular-badge">POPULAR</div>
             <h2 class="plan-name">Quarterly Plan</h2>
-            <div class="plan-price">₹40,000</div>
+            <div class="plan-price">
+                <span class="original-price">₹40,000</span> 
+                ₹26,999
+            </div>
             <div class="plan-duration">Billed Quarterly</div>
-            <div class="trial-tag">7 Days Free Trial</div>
             <ul class="features-list">
                 <li>Everything in Monthly Plan</li>
                 <li>Premium Trading Signals</li>
@@ -193,14 +200,16 @@
                 <li>Priority Support</li>
                 <li>Weekly Market Outlook</li>
             </ul>
-            <a href="payment.html" class="button">Start Free Trial</a>
+            <a href="payment.html" class="button">Start Now</a>
         </div>
-
+    
         <div class="plan-card">
             <h2 class="plan-name">Yearly Plan</h2>
-            <div class="plan-price">₹1,20,000</div>
+            <div class="plan-price">
+                <span class="original-price">₹1,20,000</span> 
+                ₹79,999
+            </div>
             <div class="plan-duration">Billed Annually</div>
-            <div class="trial-tag">7 Days Free Trial</div>
             <ul class="features-list">
                 <li>Everything in Quarterly Plan</li>
                 <li>1-on-1 Monthly Consultation</li>
@@ -208,14 +217,16 @@
                 <li>Custom Trading Strategies</li>
                 <li>24/7 VIP Support</li>
             </ul>
-            <a href="payment.html" class="button">Start Free Trial</a>
+            <a href="payment.html" class="button">Start Now</a>
         </div>
-
+    
         <div class="plan-card">
             <h2 class="plan-name">Lifetime Access</h2>
-            <div class="plan-price">₹2,50,000</div>
+            <div class="plan-price">
+                <span class="original-price">₹2,50,000</span> 
+                ₹1,66,999
+            </div>
             <div class="plan-duration">One-time Payment</div>
-            <div class="trial-tag">7 Days Free Trial</div>
             <ul class="features-list">
                 <li>Everything in Yearly Plan</li>
                 <li>Lifetime Updates</li>
@@ -223,14 +234,12 @@
                 <li>Quarterly Strategy Sessions</li>
                 <li>Direct Phone Support</li>
             </ul>
-            <a href="payment.html" class="button">Start Free Trial</a>
+            <a href="payment.html" class="button">Start Now</a>
         </div>
     </div>
- </div>
-    
 
     <div class="footer">
-         <p>&copy; Contact Us: trademillcare@gmail.com </p>
+        <p>&copy; Contact Us: trademillcare@gmail.com </p>
         <p>&copy; 2024 Trade Mill. All rights reserved.</p>
     </div>
 </body>
