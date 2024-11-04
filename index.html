@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Previous head content remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Mill</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Previous styles remain the same */
-        /* Adding new styles for minimized disclaimer */
-        .mini-disclaimer {
-            grid-column: 1 / -1;
-            font-size: 0.6em;
-            color: #999;
-            border-top: 1px solid #eee;
-            margin-top: 1rem;
-            padding-top: 0.5rem;
-            opacity: 0.7;
-            line-height: 1.2;
-        }
-
-        .mini-disclaimer h2 {
-            font-size: 0.8em;
-            color: #888;
-            margin-bottom: 0.2rem;
-        }
-
-        .mini-disclaimer p {
-            margin: 0;
-        }
-
-        /* All previous styles remain unchanged */
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -100,6 +75,22 @@
             animation: slideUp 0.5s 0.2s forwards;
             opacity: 0;
             transform: translateY(20px);
+        }
+        .logo {
+            width: 150px; /* Increased from 100px */
+            height: 150px; /* Increased from 100px */
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: cover;
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+
+        
+        }
+
+        .header:hover .logo {
+            transform: scale(1.1);
         }
 
         @keyframes slideUp {
@@ -242,6 +233,27 @@
             width: 100%;
         }
 
+        .mini-disclaimer {
+            grid-column: 1 / -1;
+            font-size: 0.6em;
+            color: #999;
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            opacity: 0.7;
+            line-height: 1.2;
+        }
+
+        .mini-disclaimer h2 {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 0.2rem;
+        }
+
+        .mini-disclaimer p {
+            margin: 0;
+        }
+
         .footer {
             background: var(--gradient);
             color: white;
@@ -276,6 +288,7 @@
 </head>
 <body>
     <div class="header">
+        <img src="logo1.png" alt="Trade Mill Logo" class="logo">
         <h1>Trade Mill</h1>
         <p>Your gateway to expert market analysis and insider insights</p>
     </div>
